@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head><title>calculator</title>
+    <style>
+      table{
+        margin-left: 400px;
+        margin-top: 50px;
+         border-radius: solid black 10px;
+        height: 400px;
+        width: 500px;
+        border-radius: 20px;
+        border: solid black 10px;
+           }
+           .buttons{
+            height: 60px;
+            width: 100px;
+            margin-left: 7px;
+            font-size: 40px;
+
+           }
+         .title{
+             border-radius: 5px;
+             margin-left: 400px;
+             text-align: center;
+             width: 500px;
+             height: 25px;
+             padding: 10px . 10px;
+             margin-top: 50px;
+             color: black;
+             background-color: pink;
+             border:solid black 1px;
+             font-size: large;
+         }
+         input[type="text"]{
+             border-radius: 10px;
+             text-align: right;
+             background-color: white;
+             width: 340px;
+             height: 50px;
+              font-size: 35px;
+             border-right: 10px;
+         }
+        input[type="button"]{
+            border-radius: 5px;
+            background-color: grey;
+            color: black;
+            border-color: black;
+        
+        }
+    </style>
+    <script>
+          function disp(val){
+              document.getElementById('sdm').value+=val;
+
+          }
+          function clr(){
+              document.getElementById('sdm').value=" ";
+          }
+
+          function solve(){
+             let x= document.getElementById('sdm').value;
+             let y=eval(x);
+             document.getElementById("sdm").value=y
+          }
+    </script>
+</head>
+<body>
+  
+    <div class="title">LAVANYA R - 4SU17CS036</div>
+<!--Ceate a table-->
+ <table border="2">
+    <tr>
+        <td>
+            <input class="buttons" type="button" value="CE" onclick="clr()">
+        </td>
+        <td colspan="3">
+            <input type="text" id="sdm">
+        </td>
+    </tr>
+    <!-- creating buttons and assign values to it-->
+    <tr>
+        <td>
+            <input class="buttons" type="button" value="+" onclick="disp('+')">
+        </td>
+        <td>
+            <input  class="buttons" type="button" value="1" onclick="disp('1')" >
+        </td>
+        <td>
+            <input class="buttons" type="button" value="2" onclick="disp('2')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="3" onclick="disp('3')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="buttons" type="button" value="-" onclick="disp('-')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="4" onclick="disp('4')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="5" onclick="disp('5')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="6" onclick="disp('6')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="buttons" type="button" value="" onclick="disp('')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="7" onclick="disp('7')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="8"onclick="disp('8')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="9" onclick="disp('9')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input class="buttons" type="button" value="/" onclick="disp('/')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="." onclick="disp('.')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="0" onclick="disp('0')">
+        </td>
+        <td>
+            <input class="buttons" type="button" value="=" onclick="solve()"  >
+        </td>
+    </tr>
+ </table>
+
+</body>
+</html>
